@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "postinstall": "yarn prisma generate",
     "clean": "rm -rf .next && rm -rf node_modules && npm cache clean --force",
     "dev": "next dev",
     "build": "next build",
