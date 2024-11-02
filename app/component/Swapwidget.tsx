@@ -1,10 +1,9 @@
 "use client"
+
 import { useEffect, useState } from 'react'
 import { useConnectModal } from '@rainbow-me/rainbowkit'
-import { RelayChain } from '@reservoir0x/relay-sdk'
 import { SwapWidget } from '@reservoir0x/relay-kit-ui'
 import { toast } from 'react-toastify'
-
 
 export default function SwapwidgetPage() {
   const { openConnectModal } = useConnectModal()
@@ -23,15 +22,11 @@ export default function SwapwidgetPage() {
       onSwapError={(error) => {
         toast.error(error)
       }}
-      multiWalletSupportEnabled={true}
-      onConnectWallet={openConnectModal} 
-      onSetPrimaryWallet={openConnectModal}
-      linkedWallets={[]}
-      onLinkNewWallet={() => openConnectModal?.()}
+      // multiWalletSupportEnabled={true}
+      onConnectWallet={openConnectModal}
       onAnalyticEvent={(eventName: string, data: any) => {
         console.log('Analytic Event', eventName, data)
       }}
-      
     />
   )
 }
