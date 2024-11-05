@@ -11,7 +11,9 @@ export const ThemeSwitcher: FC = () => {
       onClick={() => setTheme(resolvedTheme === 'light' ? 'dark' : 'light')}
       style={{background: 'transparent', border: 'none'}}
       >
-      {resolvedTheme === 'light' ? <MdLightMode style={{color:'rgb(98 111 4)', width:'30px', height:'30px'}}/> : <MdDarkMode style={{color:'rgb(217 245 9)', width:'30px', height:'30px'}}/>}
+      {resolvedTheme === 'light' 
+      ? <MdLightMode style={{color:'yellow', width:'30px', height:'30px', textShadow:'0 0 10px 10px rgba(0, 0, 0, 0.5)'}}/> 
+      : <MdDarkMode style={{color:'yellow', width:'30px', height:'30px', textShadow:'0 0 10px 10px rgba(0, 0, 0, 0.5)'}}/>}
     </button>
   )
 }
