@@ -114,7 +114,13 @@ const SwapWidgetPage: NextPage = () => {
   return (
     <Layout
       styles={{
-        background: theme === 'light' ? 'rgba(245, 242, 255, 1)' : '#1c172b'
+        backgroundColor: theme === 'light' ? 'rgba(189 189 189 0.4)' : 'rgba(125 125 125 0.5)',
+        backgroundImage: 'url(/background.webp)',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        height: '100vh',
+        display: 'flex'
       }}
     >
       <div
