@@ -1,5 +1,4 @@
 import { FC } from 'react'
-import { ThemeSwitcher } from './ThemeSwitcher'
 import { BaseApiSwitcher } from './BaseApiSwitcher'
 import { ConnectButton } from 'components/ConnectButton'
 
@@ -15,7 +14,6 @@ export const Navbar: FC = () => {
       }}
     >
       {/* <BaseApiSwitcher /> */}
-      <ThemeSwitcher />
       <ConnectButton />
     </div>
   )

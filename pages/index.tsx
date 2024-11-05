@@ -1,7 +1,6 @@
 import { NextPage } from 'next'
 import { SwapWidget } from '@reservoir0x/relay-kit-ui'
 import { Layout } from 'components/Layout'
-import { useTheme } from 'next-themes'
 import {
   useDynamicContext,
   useDynamicEvents,
@@ -34,7 +33,6 @@ const SwapWidgetPage: NextPage = () => {
   })
   const { setWalletFilter } = useWalletFilter()
   const { setShowAuthFlow, primaryWallet } = useDynamicContext()
-  const { theme } = useTheme()
   const _switchWallet = useSwitchWallet()
   const { setShowLinkNewWalletModal } = useDynamicModals()
   const userWallets = useUserWallets()
@@ -114,12 +112,12 @@ const SwapWidgetPage: NextPage = () => {
   return (
     <Layout
       styles={{
-        backgroundColor: theme === 'light' ? 'rgba(189 189 189 0.4)' : 'rgba(125 125 125 0.5)',
+        backgroundColor: 'black',
         backgroundImage: 'url(/background.webp)',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        height: '100vh',
+        height: '90vh',
         display: 'flex'
       }}
     >
@@ -129,27 +127,27 @@ const SwapWidgetPage: NextPage = () => {
           alignItems: 'center',
           justifyContent: 'center',
           width: '100%',
-          paddingTop: 50
+          paddingTop: 50,
         }}
       >
         <SwapWidget
-          defaultToToken={{
-            chainId: 10,
-            address: '0x0000000000000000000000000000000000000000',
-            decimals: 18,
-            name: 'ETH',
-            symbol: 'ETH',
-            logoURI: 'https://assets.relay.link/icons/currencies/eth.png'
+          defaultFromToken={{
+            chainId: 792703809,
+            address: '11111111111111111111111111111111',
+            decimals: 9,
+            name: 'sol',
+            symbol: 'SOL',
+            logoURI: 'https://assets.relay.link/icons/currencies/sol.png'
           }}
           // lockToToken={true}
           // lockFromToken={true}
-          defaultFromToken={{
-            chainId: 8453,
+          defaultToToken={{
+            chainId: 33139,
             address: '0x0000000000000000000000000000000000000000',
             decimals: 18,
-            name: 'ETH',
-            symbol: 'ETH',
-            logoURI: 'https://assets.relay.link/icons/currencies/eth.png'
+            name: 'APE',
+            symbol: 'APE',
+            logoURI: 'https://assets.relay.link/icons/currencies/ape.png'
           }}
           // defaultFromToken={{
           //   chainId: 1,

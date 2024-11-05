@@ -6,20 +6,22 @@ import Document, {
   DocumentContext
 } from 'next/document'
 
+
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
     const initialProps = await Document.getInitialProps(ctx)
     return { ...initialProps }
   }
 
+
   render() {
     return (
       <Html>
-        <Head />
+        <Head/>
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <body className="bg-white text-neutral-800 dark:bg-black dark:text-white">
+        <body style={{ margin: 'auto' }}>
           <Main />
           <NextScript />
         </body>
